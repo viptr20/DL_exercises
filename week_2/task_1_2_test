@@ -1,0 +1,17 @@
+import unittest
+
+from task_1_2 import Value
+
+class testValue(unittest.TestCase):
+    def test_add_and_repr(self):
+        x = Value(2.0)
+        y = Value(-3.0)
+        result = x + y
+
+        self.assertEqual(result.data, -1.0)
+
+        self.assertEqual(repr(result), "Value(data=-1.0)")
+        
+
+if __name__ == "__main__":
+    unittest.main()
